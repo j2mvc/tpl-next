@@ -1,0 +1,19 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "js-cookie": "^2.2.0",
+    "lru-cache": "^5.1.1",
+    "md5": "^2.2.1",
+    "net": "^1.0.2",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "url": "^0.11.0"
+  }
+}
