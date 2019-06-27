@@ -1,6 +1,5 @@
 import React from 'react';
 import Error from '../components/error';
-import Link from 'next/link'
 import api from '../api'
 import PageUI from '../components/PageUI'
 import HtmlHeader from "../components/HtmlHeader";

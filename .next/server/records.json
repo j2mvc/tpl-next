@@ -2,9 +2,9 @@
   "modules": {
     "byIdentifier": {
       "multi private-next-pages/index.js": 0,
-      "multi private-next-pages/mobile/index.js": 1,
-      "multi private-next-pages/content/info.js": 2,
-      "multi private-next-pages/content/list.js": 3,
+      "multi private-next-pages/content/info.js": 1,
+      "multi private-next-pages/content/list.js": 2,
+      "multi private-next-pages/mobile/index.js": 3,
       "multi private-next-pages/mobile/content/info.js": 4,
       "multi private-next-pages/mobile/content/list.js": 5,
       "multi next/dist/pages/_app": 6,

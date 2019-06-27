@@ -10,7 +10,7 @@ upload(){
     echo "[exec]发送文件"
     scp -r .next root@gzztctx.com:/home/projects/ssip/site/
     scp -r ./server.js root@gzztctx.com:/home/projects/ssip/site/
-    scp -r ./startup.sh root@gzztctx.com:/home/projects/ssip/site/
+    scp -r ./service.sh root@gzztctx.com:/home/projects/ssip/site/
     scp -r ./package-deploy.json root@gzztctx.com:/home/projects/ssip/site/package.json
     scp -r ./static root@gzztctx.com:/home/projects/ssip/site/
 }
@@ -23,7 +23,8 @@ start(){
     ./startup.sh start
 }
 echo '[exe]打包项目'
-#npm run build
+npm run build
 remove
 upload
+start
 

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/** 横幅图片 */
+.page-banner {
+  background-color: #2ecc71; }
+
+.button {
+  padding: 15px;
+  color: #2ecc71;
+  background: #f3f3f3;
+  border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
+
+/** 导航 */
+.navbar {
+  display: flex;
+  background: #333; }
+  .navbar li {
+    display: flex;
+    list-style-type: none;
+    font: 15px Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    text-align: center;
+    transition: 100ms ease-in background;
+    color: #fff; }
+    .navbar li a {
+      padding: 20px;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer; }
+      .navbar li a :hover {
+        color: #fff; }
+    .navbar li :hover {
+      background: #555; }
+

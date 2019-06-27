@@ -1,4 +1,5 @@
 import { withRouter } from 'next/router'
+import Link from 'next/link'
 
 const ActiveLink = ({ children, router, as,href }) => {
     const handleClick = (e) => {
@@ -7,7 +8,7 @@ const ActiveLink = ({ children, router, as,href }) => {
     }
 
     return (
-        <a as={as} href={href} onClick={handleClick}>
+        <a  as={as} href={href} onClick={handleClick} >
             {children}
         </a>
     )

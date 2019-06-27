@@ -1,4 +1,30 @@
+// 颜色
 $color: #2ecc71;
-.example {
+$text-color:#333333;
+$link-color:#333333;
+$link-hover-color:#ff6600;
+$background-color:#f3f3f3;
+
+$padding:15px;
+
+$radius:5px 5px 5px 5px;
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -ms-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+/** 横幅图片 */
+.page-banner {
   background-color: $color;
 }
+.button{
+  padding:$padding;
+  color: $color;
+  background:$background-color;
+  @include border-radius(10px);
+}
+
+@import "navbar";

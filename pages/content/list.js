@@ -1,6 +1,7 @@
 import React from 'react';
 import Error from 'next/error';
-import Link from "next/link";
+
+import ActiveLink from "../../components/Activelink";
 import api from "../../api";
 import "../../assets/style.scss"
 
@@ -69,13 +70,13 @@ class Page  extends React.Component {
         const ua = <div className='example'>Hello World!</div>
         const items = this.props.contentList.map((item)=>
             <li key={item.id}>
-            <Link  as={`/c/i/${item.id}`} href={{ pathname: '/content/info', query: { id: item.id }}} passHref>
-                 <a>{item.title}</a>
-                 </Link>
+            <ActiveLink  as={`/c/i/${item.id}`} href={{ pathname: '/content/info', query: { id: item.id }}} passHref>
+                 {item.title}
+             </ActiveLink>
             </li>)
 
         return <div>
-            <HtmlHeader title={this.props.title} keywords={this.props.keywords} description={this.props.description}/>
+            <HtmlHeader ktitle={this.props.title} keywords={this.props.keywords} description={this.props.description}/>
             <PageUI.Navbar list={this.props.catList}/>
             <div>{ua}</div>
             <div>{items}</div>

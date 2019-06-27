@@ -1,14 +1,14 @@
 import axios from 'axios'
 import http from 'http'
-import util from '../libs/util'
-import md5 from 'md5'
-import config from './config.js'
+
+const apiPrefix = 'http://api.ptjp.gov.cn'
+const apiKey = '66bb75d01825f4e06963dd645d901bbe'
 
 // 创建一个 axios 实例
 const service = axios.create({
     // `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。
     // 它可以通过设置一个 `baseURL` 便于为 axios 实例的方法传递相对 URL
-    baseURL: config.api,
+    baseURL: apiPrefix,
     // `timeout` 指定请求超时的毫秒数(0 表示无超时时间)
     // 如果请求话费了超过 `timeout` 的时间，请求将被中断
     timeout: 5000,
@@ -156,29 +156,19 @@ const parseParams = params =>{
 const get = async props =>{
     const {url,params,cache} = props
     // 这会在应用中暴露
-    params.apikey = config.apiKey;
-    const key = md5(url + JSON.stringify(params))
-    if (config.cached && config.cached.has(key)) {
-        return config.cached.get(key)
-    }
-    console.log('api get....',JSON.stringify(params))
+    params.apikey = apiKey;
+
     return service({
         method: 'get',
-        url:config.api + url,
-        params,
-        mode: 'no-cors'
+        url:url,
+        params
     }).then(res => {
-        console.log('data:',res.data)
         if(res.error){
             return {error:res.error};
         }
         const json = res.data;
         // 获取到数据
         if(json.code == 1){
-            if (config.cached && cache){
-                // 数据存入缓存
-                config.cached.set(key, json)
-            }
             return json;
         }
         // 处理服务器返回的错误
