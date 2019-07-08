@@ -2,7 +2,6 @@ import axios from 'axios'
 import http from 'http'
 
 const apiPrefix = 'http://api.sip.test.gzztctx.com'
-const apiKey = '66bb75d01825f4e06963dd645d901bbe'
 
 // 创建一个 axios 实例
 const service = axios.create({
