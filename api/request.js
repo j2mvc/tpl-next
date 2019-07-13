@@ -1,7 +1,7 @@
 import axios from 'axios'
 import http from 'http'
 
-const apiPrefix = 'http://api.sip.test.gzztctx.com'
+const apiPrefix = 'http://api.j2mvc.com'
 
 // 创建一个 axios 实例
 const service = axios.create({
