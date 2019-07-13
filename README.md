@@ -64,3 +64,11 @@ npm install --save express http net url
 npm install --save axios md5 lru-cache js-cookie
 npm install --save next react react-dom
 ```
+
+#### 结语
+```
+推荐使用该框架语言
+该示例仅作参考，测试能够实现服务器端渲染并有良好的体验。
+商用项目可以使用react-redux开发。
+跨域访问需要结合 http/https和http-proxy-middleware,http/https服务端渲染代理，http-proxy-middleware仅在不需要服务端渲染时代理。
+```
