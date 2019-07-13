@@ -17,6 +17,7 @@ npm install --save next react react-dom
 #### 支持jsx插件
 ```
 打开 file -> setting -> Languages and Frameworks -> JavaScript -> language version下拉框里选 react jsx
+推荐使vcode，开发体验良好，插件丰富，安装比webstorm方便多了，也没webstorm消耗内存。
 ```
 #### eslint
 ```
